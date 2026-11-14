@@ -1,6 +1,6 @@
 [package]
 name = "wotblitz-connector"
-version = "1.0.0"
+version = "0.1.0"
 description = "WoT Blitz Connector — DPI bypass for Wargaming game servers (WoT Blitz / WoT PC)"
 authors = ["wotblitz"]
 edition = "2021"
