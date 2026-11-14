@@ -1,0 +1,3 @@
+# Google / YouTube list — EMPTIED: game-only configuration (user request).
+# Full original copy: parent repo bin/lists/list-google.txt; backup of the
+# working state: .tests/backup-working-lists/

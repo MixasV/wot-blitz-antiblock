@@ -1,0 +1,13 @@
+# WoT Blitz Connector hostlist — generated from app settings.
+# Edit domains in the application, not in this file.
+wotblitz.com
+wotblitz.eu
+wargaming.net
+wargaming.com
+worldoftanks.eu
+worldoftanks.com
+worldoftanks.asia
+wgcdn.co
+gcdn.co
+wgcrowd.io
+vivox.com

@@ -1,0 +1,53 @@
+# WoT Blitz Connector — general list (game-only bisect, 14.11.2026).
+# Kept: DoH providers, Cloudflare service domains, Wargaming/WoT Blitz
+# entries (incl. the ones from the working portable list), blitzkit.app.
+# Removed for the bisect test: Discord, Google, GIF/stickers, Roblox,
+# Twitch plugins, social media, misc. Full backup: .tests/backup-working-lists/
+
+# --- DoH providers (exact match) ---
+^dns.google
+^dns.quad9.net
+^dns.nextdns.io
+^doh.opendns.com
+^doh.cleanbrowsing.org
+^freedns.controld.com
+^wikimedia-dns.org
+^cloudflare-dns.com
+
+# --- Cloudflare service domains ---
+cloudflare-ech.com
+encryptedsni.com
+cloudflareaccess.com
+cloudflareapps.com
+cloudflarebolt.com
+cloudflareclient.com
+cloudflareinsights.com
+cloudflareok.com
+cloudflarepartners.com
+cloudflareportal.com
+cloudflarepreview.com
+cloudflareresolve.com
+cloudflaressl.com
+cloudflarestatus.com
+cloudflarestorage.com
+cloudflarestream.com
+cloudflaretest.com
+
+# --- Wargaming / WoT Blitz / WoT PC ---
+wotblitz.eu
+wotblitz.com
+wargaming.net
+wargaming.com
+worldoftanks.eu
+wg.net
+eu.wargaming.net
+login.wargaming.net
+dl-wotblitz-gc.wargaming.net
+wgusst-wgceu.wargaming.net
+wguswgc-eu.wargaming.net
+92.38.140.0
+92.38.140.21
+fe-ed.wgcrowd.io
+woteuusp.vivox.com
+d.gcdn.co
+blitzkit.app

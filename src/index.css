@@ -1,0 +1,144 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --accent: #f59e0b;
+  --accent-soft: rgba(245, 158, 11, 0.14);
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-size: 14px;
+  background: #0b0e11;
+  color: #e5e7eb;
+  user-select: none;
+}
+
+/* ---------- Background layers ---------- */
+.app-bg {
+  position: fixed;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.6s ease, background-image 0.4s ease;
+}
+
+.app-bg-overlay {
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(7, 9, 12, 0.82) 0%, rgba(7, 9, 12, 0.62) 40%, rgba(7, 9, 12, 0.9) 100%),
+    radial-gradient(120% 90% at 50% 0%, rgba(0, 0, 0, 0) 30%, rgba(0, 0, 0, 0.55) 100%);
+}
+
+/* ---------- Glass card ---------- */
+.glass {
+  background: rgba(15, 19, 24, 0.72);
+  backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+}
+
+.glass-row {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+}
+
+/* ---------- Status orb ---------- */
+.orb {
+  position: relative;
+  border-radius: 9999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow 0.5s ease, border-color 0.5s ease;
+}
+
+.orb-pulse::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  border: 2px solid currentColor;
+  opacity: 0.5;
+  animation: orb-pulse 2s ease-out infinite;
+}
+
+@keyframes orb-pulse {
+  0% { transform: scale(0.96); opacity: 0.55; }
+  70% { transform: scale(1.12); opacity: 0; }
+  100% { transform: scale(1.12); opacity: 0; }
+}
+
+/* ---------- Log console ---------- */
+.log-console {
+  font-family: Consolas, "Cascadia Mono", monospace;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.log-console::-webkit-scrollbar,
+.thin-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.log-console::-webkit-scrollbar-thumb,
+.thin-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.14);
+  border-radius: 3px;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background 0.15s ease, transform 0.1s ease, border-color 0.15s ease;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.btn-connect {
+  background: linear-gradient(180deg, #16a34a, #15803d);
+  box-shadow: 0 4px 18px rgba(22, 163, 74, 0.35);
+}
+.btn-connect:hover:not(:disabled) {
+  background: linear-gradient(180deg, #22c55e, #16a34a);
+}
+
+.btn-stop {
+  background: linear-gradient(180deg, #dc2626, #b91c1c);
+  box-shadow: 0 4px 18px rgba(220, 38, 38, 0.35);
+}
+.btn-stop:hover:not(:disabled) {
+  background: linear-gradient(180deg, #ef4444, #dc2626);
+}
+
+/* ---------- Settings slide-over ---------- */
+.slide-over {
+  animation: slide-in 0.22s ease-out;
+}
+@keyframes slide-in {
+  from { transform: translateX(24px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+input[type="text"] {
+  outline: none;
+}
+input[type="text"]:focus {
+  border-color: var(--accent);
+}

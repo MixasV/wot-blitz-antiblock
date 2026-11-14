@@ -1,0 +1,40 @@
+[package]
+name = "wotblitz-connector"
+version = "1.0.0"
+description = "WoT Blitz Connector — DPI bypass for Wargaming game servers (WoT Blitz / WoT PC)"
+authors = ["wotblitz"]
+edition = "2021"
+
+[[bin]]
+name = "wotblitz-connector"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { version = "2.0", features = [] }
+
+[dependencies]
+tauri = { version = "2.0", features = [] }
+tauri-plugin-opener = "2"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tokio = { version = "1.38", features = ["full"] }
+parking_lot = "0.12"
+thiserror = "1.0"
+reqwest = { version = "0.12", default-features = false, features = ["rustls-tls"] }
+
+[target.'cfg(windows)'.dependencies.windows]
+version = "0.58"
+features = [
+    "Win32_Foundation",
+    "Win32_System_Threading",
+    "Win32_System_JobObjects",
+    "Win32_System_Console",
+    "Win32_Security",
+    "Win32_System_Registry",
+    "Win32_System_Diagnostics_ToolHelp",
+    "Win32_System_Services",
+    "Win32_System_Pipes",
+    "Win32_Storage_FileSystem",
+    "Win32_UI_Shell",
+    "Win32_UI_WindowsAndMessaging",
+]

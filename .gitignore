@@ -1,0 +1,17 @@
+# Node / frontend
+node_modules/
+dist/
+
+# Rust build artifacts
+src-tauri/target/
+
+# Tauri generated files (rebuilt by tauri-build)
+src-tauri/gen/schemas/
+
+# Runtime artifacts created next to the dev exe
+src-tauri/configs/
+
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
